@@ -31,18 +31,22 @@ public class Server extends JFrame implements ActionListener {
         setLocation(200, 50);
         getContentPane().setFont(font);
         getContentPane().setBackground(Color.white);
+
+
+        inputFiled();
     }
 
     public void windowLayout() {
+
         setLayout(null);
-        // bottom input filed
-        inputFiled();
 
        // topbar
         panel.setBackground(new Color(7,94,84));
         panel.setBounds(0, 0, 450, 70);
         add(panel);
         panel.setLayout(null);
+
+
         leftIcon();
         profileImage();
         videoIcon();
@@ -50,6 +54,7 @@ public class Server extends JFrame implements ActionListener {
         dotIcon();
         profileName();
         profileStatus();
+
     }
 
     public void leftIcon() {
@@ -164,6 +169,7 @@ public class Server extends JFrame implements ActionListener {
 
     public void inputFiled(){
         panel.setBounds(5, 75, 440, 570);
+        panel.setBackground(Color.lightGray);
         add(panel);
     }
 }
