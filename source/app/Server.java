@@ -11,7 +11,6 @@ public class Server extends JFrame implements ActionListener {
     Server() {
         // window layout
         windowLayout();
-        inputFiled();
         // run window
         runWindow();
 
@@ -28,13 +27,12 @@ public class Server extends JFrame implements ActionListener {
 
     public void runWindow() {
         setTitle("Chat Application");
-        setSize(450, 700);
+        setSize(450, 740);
         setResizable(false);
         setLocation(200, 50);
         getContentPane().setFont(font);
-        getContentPane().setBackground(Color.white);
-
-
+        getContentPane().setBackground(Color.WHITE);
+//        setUndecorated(true); // to disabled menu bar
     }
 
     public void windowLayout() {
@@ -56,6 +54,8 @@ public class Server extends JFrame implements ActionListener {
         profileName();
         profileStatus();
 
+
+        messagingBody();
     }
 
     public void leftIcon() {
@@ -168,9 +168,19 @@ public class Server extends JFrame implements ActionListener {
         panel.add(status);
     }
 
-    public void inputFiled(){
-        panel.setBounds(5, 75, 440, 570);
-        panel.setBackground(Color.lightGray);
-        add(panel);
+    public void messagingBody(){
+        JPanel box = new JPanel();
+        box.setBounds(5, 75, 440, 570);
+        box.setBackground(Color.LIGHT_GRAY);
+        add(box);
+
+        textField();
+    }
+
+    public void textField(){
+        JTextField input = new JTextField();
+        input.setBounds(6, 660, 310, 40);
+        input.setFont(font);
+        add(input);
     }
 }
