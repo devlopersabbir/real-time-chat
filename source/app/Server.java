@@ -175,6 +175,7 @@ public class Server extends JFrame implements ActionListener {
         add(box);
 
         textField();
+        sendBtn();
     }
 
     public void textField(){
@@ -182,5 +183,14 @@ public class Server extends JFrame implements ActionListener {
         input.setBounds(6, 660, 310, 40);
         input.setFont(font);
         add(input);
+    }
+
+    public void sendBtn(){
+        JButton button = new JButton("Send");
+        button.setBounds(320, 660, 123, 40);
+        button.setFont(font);
+//        button.setBackground(new Color(7, 94, 84));
+//        button.setForeground(Color.WHITE);
+        add(button);
     }
 }
