@@ -11,8 +11,10 @@ public class Server extends JFrame implements ActionListener {
     Server() {
         // window layout
         windowLayout();
+        inputFiled();
         // run window
         runWindow();
+
         setVisible(true);
     }
 
@@ -33,7 +35,6 @@ public class Server extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.white);
 
 
-        inputFiled();
     }
 
     public void windowLayout() {
